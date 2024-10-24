@@ -1,0 +1,12 @@
+<h2>Lista de productos</h2>
+<ul>
+  <li *ngFor="let product of products">
+    {{ product }}
+  </li>
+</ul>
+
+<input type="text" #productInput placeholder="Ingrese un producto" />
+
+<button (click)="addProduct(productInput.value)">Agregar producto</button>
+
+<p>Cantidad total de productos: {{ counter() }}</p>
